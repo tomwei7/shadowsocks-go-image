@@ -1,3 +1,9 @@
 ### shadowsocks-go-image
 
-shadowsocks-go server docker image
+### usage
+
+just run
+
+```
+docker run -d -p 8388:8388 -e SS_PASSWD=<you passwd> tomwei7/shadowsocks-go-image
+```
