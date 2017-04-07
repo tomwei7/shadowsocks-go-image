@@ -11,6 +11,8 @@ else
     fi
     if [ ! -z $SS_METHOD ]; then
         set -- -m $SS_METHOD "$@"
+    else
+        set -- -m aes-128-cfb "$@"
     fi
     if [ ! -z $SS_PASSWD ]; then
         set -- -k $SS_PASSWD "$@"
