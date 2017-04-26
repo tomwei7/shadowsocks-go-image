@@ -1,6 +1,11 @@
 #!/bin/bash
 set -e
 
+if [[ "$1" == "shadowsocks-local" ]];then
+    exec "$@"
+    exit $?
+fi
+
 if [[ "$1" == *.json ]];then
     set -- shadowsocks-server -c "$@"
 else
